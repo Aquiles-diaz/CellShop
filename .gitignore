@@ -1,0 +1,7 @@
+# Ignoramos la carpeta node_modules
+node_modules/
+.venv/
+.vscode/
+# Ignoramos los archivos de configuración de paquetes
+package.json
+package-lock.json
