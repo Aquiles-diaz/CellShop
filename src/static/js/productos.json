@@ -1,0 +1,244 @@
+[
+    {
+        "id": "celular-01",
+        "titulo": "IPHONE 12",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/70ed2b26-e5ff-9394-78ea-e63eb19a3979/Apple-Iphone-XS-color-blanco-66e890628a661.webp",
+        "categoria": {
+            "nombre": "Iphone",
+            "id": "Iphone"
+        },
+        "precio": 550000
+    },
+    {
+        "id": "celular-02",
+        "titulo": "IPHONE 12 pro max",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/134fcef5-e2c0-3fad-deab-a0d39f257aeb/iphone-16-promax-671527b3c4d46.webp",
+        "categoria": {
+            "nombre": "Iphone",
+            "id": "Iphone"
+        },
+        "precio": 800000
+    },
+    {
+        "id": "celular-03",
+        "titulo": "IPHONE 14 NEGRO",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/134fcef5-e2c0-3fad-deab-a0d39f257aeb/iphone-16-pro-max-671527b3a20a5.webp",
+        "categoria": {
+            "nombre": "Iphone",
+            "id": "Iphone"
+        },
+        "precio": 800000
+    },
+    {
+        "id": "celular-04",
+        "titulo": "IPHONE 14 AZUL",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/70ed2b26-e5ff-9394-78ea-e63eb19a3979/Iphone-XS-color-amarillo-66e8906292f5c.webp",
+        "categoria": {
+            "nombre": "Iphone",
+            "id": "Iphone"
+        },
+        "precio": 800000
+    },
+    {
+        "id": "celular-05",
+        "titulo": "IPHONE 14 BLANCO",
+        "imagen": "https://media.discordapp.net/attachments/1230487612725395548/1306345375409377331/12-pro-site-preto.png?ex=67365470&is=673502f0&hm=7fb02d44e653c61b59a9f74b389886fcaac464e992894909592558f24ab77037&=&format=webp&quality=lossless&width=400&height=473",
+        "categoria": {
+            "nombre": "Iphone",
+            "id": "Iphone"
+        },
+        "precio": 800000
+    },
+    {
+        "id": "celular-06",
+        "titulo": "IPHONE 13 MINI",
+        "imagen": "https://media.discordapp.net/attachments/1230487612725395548/1306345375409377331/12-pro-site-preto.png?ex=67365470&is=673502f0&hm=7fb02d44e653c61b59a9f74b389886fcaac464e992894909592558f24ab77037&=&format=webp&quality=lossless&width=400&height=473",
+        "categoria": {
+            "nombre": "Iphone",
+            "id": "Iphone"
+        },
+        "precio": 650000
+    },
+    {
+        "id": "celular-07",
+        "titulo": "IPHONE 13 PRO",
+        "imagen": "https://media.discordapp.net/attachments/1230487612725395548/1306347583332945970/iphone_13_PNG29.png?ex=6736567e&is=673504fe&hm=eef180e78cb14c004a88bfec555500e3904bb0b88e75891f86774adeea2dc725&=&format=webp&quality=lossless&width=296&height=350",
+        "categoria": {
+            "nombre": "Iphone",
+            "id": "Iphone"
+        },
+        "precio": 750000
+    },
+    {
+        "id": "celular-08",
+        "titulo": "IPHONE 11",
+        "imagen": "https://media.discordapp.net/attachments/1230487612725395548/1306347583332945970/iphone_13_PNG29.png?ex=6736567e&is=673504fe&hm=eef180e78cb14c004a88bfec555500e3904bb0b88e75891f86774adeea2dc725&=&format=webp&quality=lossless&width=296&height=350",
+        "categoria": {
+            "nombre": "Iphone",
+            "id": "Iphone"
+        },
+        "precio": 500000
+    },
+
+    {
+        "id": "celular-11",
+        "titulo": "SAMSUNG Galaxy S24",
+        "imagen": "https://media.discordapp.net/attachments/1230487612725395548/1306353868287770647/1731529326126.png?ex=67365c59&is=67350ad9&hm=9227b1cd1363532b7072f899a087e4952c05e5fe4e324aaceca043eac18f0d33&=&format=webp&quality=lossless&width=473&height=473",
+        "categoria": {
+            "nombre": "Samsung",
+            "id": "Samsung"
+        },
+        "precio": 420000
+    },
+    {
+        "id": "celular-12",
+        "titulo": "SAMSUNG Galaxy A55 5G",
+        "imagen": "https://media.discordapp.net/attachments/1230487612725395548/1306353950760370267/1731529343884.png?ex=67365c6c&is=67350aec&hm=d61da694fb65ae3e4ced9e9c7b1aa7eb4e843c44302fc591e7573b11bf1e34d0&=&format=webp&quality=lossless&width=473&height=473",
+        "categoria": {
+            "nombre": "Samsung",
+            "id": "Samsung"
+        },
+        "precio": 790000
+    },
+    {
+        "id": "celular-13",
+        "titulo": "SAMSUNG Galaxy A06",
+        "imagen": "https://media.discordapp.net/attachments/1230487612725395548/1306352161004851210/750_750-SM-A256B_Galaxy-A25-5G_Blue_Front.png?ex=67365ac2&is=67350942&hm=33c6dc1b3d019576a72ac27e9a9fe19fae94cb2d00220389071761293af44c23&=&format=webp&quality=lossless&width=350&height=350",
+        "categoria": {
+            "nombre": "Samsung",
+            "id": "Samsung"
+        },
+        "precio": 400000
+    },
+    {
+        "id": "celular-14",
+        "titulo": "SAMSUNG Galaxy A54 5G",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/de02bee1-db5e-11d8-71d3-b6fc3ef98d4f/Galaxy-A15-color-azul-66e4a33200a85.webp",
+        "categoria": {
+            "nombre": "Samsung",
+            "id": "Samsung"
+        },
+        "precio": 850000
+    },
+    {
+        "id": "celular-15",
+        "titulo": "SAMSUNG Galaxy A14",
+        "imagen": "https://cdn.discordapp.com/attachments/1230487612725395548/1306351615372034141/1e50b799-3c28-4d21-86ba-b96aea3ba649__1_-removebg-preview.png?ex=67365a3f&is=673508bf&hm=c1b8efe595ae0be46ea02c02e0c6cf1fab3252606173bb86885556f56ab96b98&",
+        "categoria": {
+            "nombre": "Samsung",
+            "id": "Samsung"
+        },
+        "precio": 350000
+    },
+    {
+        "id": "celular-16",
+        "titulo": "SAMSUNG Galaxy S21",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/234d4648-5d2b-11b7-965f-0bcef690fa48/Galaxy-A35-5G-color-amarillo-66e48ae36802b.webp",
+        "categoria": {
+            "nombre": "Samsung",
+            "id": "Samsung"
+        },
+        "precio": 950000
+    },
+    {
+        "id": "celular-17",
+        "titulo": "SAMSUNG Galaxy S22",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/7d67275f-4987-7aeb-38ff-8f4019ddb02b/Diseno-sin-titulo-64-67151e731066c.webp",
+        "categoria": {
+            "nombre": "Samsung",
+            "id": "Samsung"
+        },
+        "precio": 870000
+    },
+    {
+        "id": "celular-18",
+        "titulo": "SAMSUNG Galaxy Z Fold 4",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/7d67275f-4987-7aeb-38ff-8f4019ddb02b/Diseno-sin-titulo-63-67151e731066d.webp",
+        "categoria": {
+            "nombre": "Samsung",
+            "id": "Samsung"
+        },
+        "precio": 1200000
+    },
+
+    {
+        "id": "celular-21",
+        "titulo": "MOTOROLA EDGE 40",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/7a3edd86-e859-bba8-8dd9-7510d4f22933/Motorola-Moto-G54-5G-vista-frontal-66e865d835e7b-O.png",
+        "categoria": {
+            "nombre": "Motorola",
+            "id": "Motorola"
+        },
+        "precio": 720000
+    },
+    {
+        "id": "celular-22",
+        "titulo": "MOTOROLA E14 GRIS",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/7a3edd86-e859-bba8-8dd9-7510d4f22933/Moto-G54-5G-vista-frontal-color-azul-66e865d8497fb.webp",
+        "categoria": {
+            "nombre": "Motorola",
+            "id": "Motorola"
+        },
+        "precio": 450200
+    },
+    {
+        "id": "celular-23",
+        "titulo": "MOTOROLA E14",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/43ad212d-0fd3-1e15-6a88-f1642a68ed62/Diseno-sin-titulo-2024-08-19T174838-310-66c3be3c6719c.webp",
+        "categoria": {
+            "nombre": "Motorola",
+            "id": "Motorola"
+        },
+        "precio": 450200
+    },
+    {
+        "id": "celular-24",
+        "titulo": "MOTOROLA EDGE 40 NEGRO",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/fe47d1d2-2d1e-59ee-4036-8549a46593c4/Diseno-sin-titulo-75-667365fba3d1a.webp",
+        "categoria": {
+            "nombre": "Motorola",
+            "id": "Motorola"
+        },
+        "precio": 720000
+    },
+    {
+        "id": "celular-25",
+        "titulo": "MOTOROLA EDGE 40 PRO",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/fe47d1d2-2d1e-59ee-4036-8549a46593c4/G24-POWER-661f10867c842.webp",
+        "categoria": {
+            "nombre": "Motorola",
+            "id": "Motorola"
+        },
+        "precio": 720000
+    },
+    {
+        "id": "celular-26",
+        "titulo": "MOTOROLA G100",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/f0ed90a3-9669-8b77-20cb-53ba2ab270dc/Motorola-Moto-G84-5G-color-rojo-66e5afb6dc4df.webp",
+        "categoria": {
+            "nombre": "Motorola",
+            "id": "Motorola"
+        },
+        "precio": 580000
+    },
+    {
+        "id": "celular-27",
+        "titulo": "MOTOROLA G60",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/43ad212d-0fd3-1e15-6a88-f1642a68ed62/Diseno-sin-titulo-2024-08-19T174838-310-66c3be3c6719c.webp",
+        "categoria": {
+            "nombre": "Motorola",
+            "id": "Motorola"
+        },
+        "precio": 490000
+    },
+    {
+        "id": "celular-28",
+        "titulo": "MOTOROLA G30",
+        "imagen": "https://d28hi93gr697ol.cloudfront.net/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/43ad212d-0fd3-1e15-6a88-f1642a68ed62/Diseno-sin-titulo-2024-08-19T174838-310-66c3be3c6719c.webp",
+        "categoria": {
+            "nombre": "Motorola",
+            "id": "Motorola"
+        },
+        "precio": 380000
+    }
+]

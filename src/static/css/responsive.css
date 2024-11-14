@@ -1,0 +1,98 @@
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  .hero {
+    padding: 2rem;
+  }
+
+  .customer-support {
+    display: none;
+  }
+
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .navbar .fa-bars {
+    display: block;
+    color: #fff;
+    font-size: 3rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .content-banner {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 25rem 0;
+  }
+
+  .heading-1 {
+    font-size: 2.4rem;
+  }
+
+  .container-products {
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  }
+
+  .menu-footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .copyright {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+/* ************ */
+/*       MEDIA QUERIES -- 468px       */
+/* ************ */
+
+@media (max-width: 468px) {
+  html {
+    font-size: 42.5%;
+  }
+
+  .content-banner {
+    max-width: 50rem;
+    padding: 22rem 0;
+  }
+
+  .heading-1 {
+    font-size: 2.8rem;
+  }
+
+  .container-products {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+  }
+
+  .content-card-product h3 {
+    font-size: 2.2rem;
+  }
+
+  .contact-info ul,
+  .information ul,
+  .my-account ul {
+    display: none;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+
+  .menu-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .content p {
+    font-size: 1.6rem;
+  }
+}

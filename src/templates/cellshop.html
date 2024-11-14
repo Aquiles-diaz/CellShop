@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-hero">
+        <div class="container hero">
+          <div class="customer-support">
+            <i class="fa-solid fa-headset"></i>
+            <div class="content-customer-support">
+              <span class="text">Soporte al cliente</span>
+              <span class="number">{{ customer_support_number }}</span>
+            </div>
+          </div>
+
+          <div class="container-logo">
+            <i class="fa-solid fa-mobile"></i>
+            <h1 class="logo"><a href="/">{{ site_name }}</a></h1>
+          </div>
+
+          <div class="container-user">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-navbar">
+        <nav class="navbar container">
+          <i class="fa-solid fa-bars"></i>
+          <ul class="menu">
+            {% for item in menu_items %}
+            <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="banner">
+      <div class="content-banner">
+        <p>{{ banner_text }}</p>
+        <h2>{{ banner_heading | safe }}</h2>
+      </div>
+      <div class="cart-icon">
+        <p>Dirigirse al carrito</p>
+        <a href="{{ url_for('index') }}">
+          <i class="fa-solid fa-right-to-bracket"></i>
+        </a>
+      </div>
+    </section>
+
+    <main class="main-content">
+      <section class="container top-products">
+        <h1 class="heading-1">Nuestras marcas</h1>
+
+        <div class="container-products">
+          {% for product in products %}
+          <div class="card-product">
+            <div class="container-img">
+              <img src="{{ product.image_url }}" alt="{{ product.name }}" />
+            </div>
+            <div class="content-card-product">
+              <div class="stars">
+                {% for star in range(product.rating) %}
+                <i class="fa-solid fa-star"></i>
+                {% endfor %} {% for empty_star in range(5 - product.rating) %}
+                <i class="fa-regular fa-star"></i>
+                {% endfor %}
+              </div>
+              <h3>{{ product.name }}</h3>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container container-footer">
+        <div class="contact-info">
+          <p class="title-footer">Información de Contacto</p>
+          <ul>
+            <li>Dirección: {{ contact_info.address }}</li>
+            <li>Teléfono: {{ contact_info.phone }}</li>
+            <li>Email: {{ contact_info.email }}</li>
+          </ul>
+        </div>
+
+        <div class="social-icons">
+          {% for social in social_links %}
+          <span class="{{ social.platform }}">
+            <i class="fa-brands fa-{{ social.icon }}"></i>
+          </span>
+          {% endfor %}
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/81581fb069.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

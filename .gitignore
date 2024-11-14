@@ -2,6 +2,7 @@
 node_modules/
 .venv/
 .vscode/
+requeriments.txt
 # Ignoramos los archivos de configuración de paquetes
 package.json
 package-lock.json

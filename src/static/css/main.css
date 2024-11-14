@@ -41,13 +41,13 @@ a {
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  background-color: blue;
+  background-color: rgb(0, 0, 0);
 }
 
 aside {
   padding: 2rem;
   padding-right: 0;
-  color: var(--clr-white);
+  color: rgb(67, 79, 255);
   position: sticky;
   top: 0;
   height: 100vh;
@@ -83,7 +83,7 @@ aside {
 
 .boton-menu.active {
   background-color: var(--clr-white);
-  color: var(--clr-main);
+  color: black;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   position: relative;
@@ -124,7 +124,7 @@ aside {
 
 .numerito {
   background-color: var(--clr-white);
-  color: var(--clr-main);
+  color: black;
   padding: 0.15rem 0.25rem;
   border-radius: 0.25rem;
 }
@@ -135,12 +135,12 @@ aside {
 }
 
 .texto-footer {
-  color: var(--clr-main-light);
+  color: rgb(0, 17, 255);
   font-size: 0.85rem;
 }
 
 main {
-  background-color: var(--clr-white);
+  background-color: rgb(255, 255, 255);
   margin: 1rem;
   margin-left: 0;
   border-radius: 2rem;
@@ -148,7 +148,7 @@ main {
 }
 
 .titulo-principal {
-  color: var(--clr-main);
+  color: black;
   margin-bottom: 2rem;
 }
 
@@ -164,7 +164,7 @@ main {
 }
 
 .producto-detalles {
-  background-color: var(--clr-main);
+  background-color: black;
   color: var(--clr-white);
   padding: 0.5rem;
   border-radius: 1rem;
@@ -182,18 +182,18 @@ main {
 .producto-agregar {
   border: 0;
   background-color: var(--clr-white);
-  color: var(--clr-main);
+  color: black;
   padding: 0.4rem;
   text-transform: uppercase;
   border-radius: 2rem;
   cursor: pointer;
-  border: 2px solid var(--clr-white);
+  border: 1px solid rgb(0, 17, 255);
   transition: background-color 0.2s, color 0.2s;
 }
 
 .producto-agregar:hover {
-  background-color: var(--clr-main);
-  color: var(--clr-white);
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 /** CARRITO **/
@@ -319,7 +319,7 @@ main {
   aside {
     position: fixed;
     z-index: 9;
-    background-color: var(--clr-main);
+    background-color: #000000;
     left: 0;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.75);
     transform: translateX(-100%);
