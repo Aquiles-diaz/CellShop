@@ -111,12 +111,12 @@ def contacto():
 
     return render_template('contactos.html')
 
-
-
-
-
-
-
+clientes = []
+@app.route('/clientes')
+def mostrar_clientes():
+    # Consultar todos los contactos en la base de datos
+    clientes = Contacto.query.all()  # Recupera todos los contactos
+    return render_template('clientes.html', clientes=clientes)
 
 @app.route('/carrito')
 def carrito():
