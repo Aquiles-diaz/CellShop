@@ -23,12 +23,16 @@ login_manager = LoginManager(app)
 login_manager.login_message = None
 login_manager.login_view = "login"
 
+
 # Modelos de base de datos
 class Usuario(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(30), unique=True, nullable=False)
     password = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
+
+
+
 
 class Contacto(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -43,14 +47,34 @@ class Contacto(db.Model):
 def load_user(user_id):
     return Usuario.query.get(int(user_id))
 
+
+
+
+
+
+
 # Creación de la base de datos
 with app.app_context():
     db.create_all()
+
+
+
+
+
+
+
+
 
 # Rutas de la aplicación
 @app.route('/')
 def home():
     return render_template('index.html')
+
+
+
+
+
+
 
 @app.route('/contacto', methods=['GET', 'POST'])
 def contacto():
@@ -82,10 +106,17 @@ def contacto():
             flash("Error al enviar el mensaje. Por favor, inténtalo de nuevo.", "error")
             print(f"Error al guardar el contacto: {e}")  # Mensaje en consola para depuración
             import traceback
-            traceback.print_exc()  # Imprime más detalles sobre el error
+            traceback.print_exc()  # Imprime más detalles sobre  error
         return redirect(url_for('contacto'))
 
     return render_template('contactos.html')
+
+
+
+
+
+
+
 
 @app.route('/carrito')
 def carrito():
@@ -93,7 +124,7 @@ def carrito():
         with open('productos.json', 'r') as archivo:
             productos = json.load(archivo)
     except FileNotFoundError:
-        print("El archivo 'celulares.json' no se encuentra.")
+        print("El archivo 'productos.json' no se encuentra.")
         productos = []
 
     carrito_vacio = len(productos) == 0
@@ -106,6 +137,34 @@ def carrito():
     return render_template('carrito.html', productos=productos, carrito_vacio=carrito_vacio, total=total)
 
 
+
+
+
+
+
+
+
+
+
+
+
+# Ruta para Errores
+
+@app.errorhandler(404)
+def no_encontrado(error):
+    return render_template('errors/error404.html', error=error)
+
+
+@app.errorhandler(405)
+def method_not_allowed(error):
+    return render_template('errors/error405.html', error=error), 405
+
+
+@app.errorhandler(500)
+def internal_server():
+    return render_template('errors/error500.html')
+
+# ----
 # Iniciar la aplicación
 if __name__ == "__main__":
     app.run(debug=True)

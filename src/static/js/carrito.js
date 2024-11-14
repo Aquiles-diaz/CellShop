@@ -16,9 +16,7 @@ function cargarProductosCarrito() {
     contenedorCarritoProductos.classList.remove("disabled");
     contenedorCarritoAcciones.classList.remove("disabled");
     contenedorCarritoComprado.classList.add("disabled");
-
     contenedorCarritoProductos.innerHTML = "";
-
     productosEnCarrito.forEach((producto) => {
       const div = document.createElement("div");
       div.classList.add("carrito-producto");

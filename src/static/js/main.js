@@ -20,6 +20,7 @@ botonesCategorias.forEach((boton) =>
 
 function cargarProductos(productosElegidos) {
   contenedorProductos.innerHTML = "";
+
   productosElegidos.forEach((producto) => {
     const div = document.createElement("div");
     div.classList.add("producto");

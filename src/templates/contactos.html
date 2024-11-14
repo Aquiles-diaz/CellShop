@@ -2,116 +2,139 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CarpiShop</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='css/main.css') }}"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <title>Contacto | CARPYFOOD</title>
   </head>
-  <body>
-    <div class="wrapper">
-      <header class="header-mobile">
-        <h1 class="logo">CarpiShop</h1>
-        <button class="open-menu" id="open-menu">
-          <i class="bi bi-list"></i>
-        </button>
-      </header>
-      <aside>
-        <button class="close-menu" id="close-menu">
-          <i class="bi bi-x"></i>
-        </button>
-        <header>
-          <h1 class="logo">CarpiShop</h1>
-        </header>
-        <nav>
-          <ul>
-            <li>
-              <a class="boton-menu boton-volver" href="{{ url_for('index') }}">
-                <i class="bi bi-arrow-return-left"></i> Seguir comprando
-              </a>
-            </li>
-            <li>
-              <a
-                class="boton-menu boton-carrito {% if active_page == 'carrito' %}active{% endif %}"
-                href="{{ url_for('carrito') }}"
-              >
-                <i class="bi bi-cart-fill"></i> Carrito
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <footer>
-          <p class="texto-footer">© 2022 Carpi Coder</p>
-        </footer>
-      </aside>
-      <main>
-        <h2 class="titulo-principal">Carrito</h2>
-        <div class="contenedor-carrito">
-          {% if carrito_vacio %}
-          <p id="carrito-vacio" class="carrito-vacio">
-            Tu carrito está vacío. <i class="bi bi-emoji-frown"></i>
-          </p>
-          {% else %}
-          <div id="carrito-productos" class="carrito-productos">
-            {% for producto in productos %}
-            <!-- Render each product here -->
-            <div class="producto">
-              <p>{{ producto.nombre }}</p>
-              <p>{{ producto.precio }}</p>
-            </div>
-            {% endfor %}
-          </div>
-          <div id="carrito-acciones" class="carrito-acciones">
-            <div class="carrito-acciones-izquierda">
-              <button
-                id="carrito-acciones-vaciar"
-                class="carrito-acciones-vaciar"
-              >
-                Vaciar carrito
-              </button>
-            </div>
-            <div class="carrito-acciones-derecha">
-              <div class="carrito-acciones-total">
-                <p>Total:</p>
-                <p id="total">{{ total | default('$3000') }}</p>
-              </div>
-              <button
-                id="carrito-acciones-comprar"
-                class="carrito-acciones-comprar"
-              >
-                Comprar ahora
-              </button>
-            </div>
-          </div>
-          {% endif %}
 
-          <p
-            id="carrito-comprado"
-            class="carrito-comprado {% if not compra_exitosa %}disabled{% endif %}"
+  <body class="bg-gray-700 flex justify-center items-center h-screen">
+    <div class="max-w-lg w-full bg-white shadow-lg rounded-lg p-8">
+      <h2 class="text-2xl font-bold text-gray-800 text-center mb-4">
+        Contáctanos
+      </h2>
+      <p class="text-gray-600 text-center mb-6">
+        ¿Tienes preguntas? Envíanos un mensaje.
+      </p>
+
+      <form action="{{ url_for('contacto') }}" method="POST">
+        <!-- Nombre Completo -->
+        <div class="mb-4">
+          <label class="block text-gray-700 font-medium mb-2" for="nombre"
+            >Nombre Completo</label
           >
-            Muchas gracias por tu compra. <i class="bi bi-emoji-laughing"></i>
-          </p>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Tu nombre completo"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
+            required
+          />
         </div>
-      </main>
-    </div>
 
+        <!-- Correo Electrónico -->
+        <div class="mb-4">
+          <label class="block text-zinc-700 font-medium mb-2" for="email"
+            >Correo Electrónico</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Tu correo electrónico"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
+            required
+          />
+        </div>
+
+        <!-- Teléfono -->
+        <div class="mb-4">
+          <label class="block text-zinc-700 font-medium mb-2" for="telefono"
+            >Número de Teléfono</label
+          >
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="Tu número de teléfono"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
+          />
+        </div>
+
+        <!-- Motivo de Contacto -->
+        <div class="mb-4">
+          <label class="block text-zinc-900 font-medium mb-2" for="motivo"
+            >Motivo de Contacto</label
+          >
+          <select
+            id="motivo"
+            name="motivo"
+            class="w-full px-4 py-2 border text-zinc-900 border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
+          >
+            <option value="" disabled selected>Selecciona un motivo</option>
+            <option value="consulta">Consulta</option>
+            <option value="soporte">Soporte Técnico</option>
+            <option value="feedback">Feedback</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <!-- Mensaje -->
+        <div class="mb-6">
+          <label class="block text-gray-700 font-medium mb-2" for="mensaje"
+            >Mensaje</label
+          >
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="4"
+            placeholder="Escribe tu mensaje aquí..."
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Botón de Enviar -->
+        <div
+          class="flex flex-col sm:flex-row gap-1 justify-center items-center"
+        >
+          <button
+            type="submit"
+            class="bg-yellow-500 text-black px-8 py-3 rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50"
+          >
+            Enviar Mensaje
+          </button>
+          <a
+            href="{{ url_for('home') }}"
+            class="bg-green-700 text-white px-6 py-2 rounded-lg hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+          >
+            Volver a Inicio
+          </a>
+        </div>
+      </form>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %}
+    <ul>
+      {% for category, message in messages %}
+      <li class="alert alert-{{ category }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% endwith %}
+    <script src="{{ url_for('static', filename='js/Validar_Form_contacto.js') }}"></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="{{ url_for('static', filename='js/carrito.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
   </body>
 </html>
