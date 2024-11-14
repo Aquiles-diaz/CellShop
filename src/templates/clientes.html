@@ -3,44 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clientes | CellShop</title>
+    <title>Editar Cliente | CellShop</title>
     <!-- Enlace a Tailwind CSS desde un CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gray-100 font-sans antialiased">
     <div class="container mx-auto p-6">
-      <h2 class="text-3xl font-semibold text-center mb-6">Lista de Clientes</h2>
+      <h2 class="text-3xl font-semibold text-center mb-6">Editar Cliente</h2>
 
-      <div class="overflow-x-auto shadow-lg rounded-lg bg-white">
-        <table class="min-w-full table-auto">
-          <thead class="bg-blue-500 text-white">
-            <tr>
-              <th class="px-4 py-2 text-left">ID</th>
-              <th class="px-4 py-2 text-left">Nombre</th>
-              <th class="px-4 py-2 text-left">Email</th>
-              <th class="px-4 py-2 text-left">Teléfono</th>
-              <th class="px-4 py-2 text-left">Motivo</th>
-              <th class="px-4 py-2 text-left">Mensaje</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for cliente in clientes %}
-            <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-2">{{ cliente.id }}</td>
-              <td class="px-4 py-2">{{ cliente.nombre | upper }}</td>
-              <!-- Nombre en mayúsculas -->
-              <td class="px-4 py-2">{{ cliente.email | capitalize }}</td>
-              <!-- Email en mayúsculas -->
-              <td class="px-4 py-2">{{ cliente.telefono | upper }}</td>
-              <!-- Teléfono en mayúsculas -->
-              <td class="px-4 py-2">{{ cliente.motivo | upper }}</td>
-              <!-- Motivo en mayúsculas -->
-              <td class="px-4 py-2">{{ cliente.mensaje | capitalize }}</td>
-              <!-- Mensaje en mayúsculas -->
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+      <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+        <form
+          action="{{ url_for('editar_cliente', id=cliente.id) }}"
+          method="POST"
+        >
+          <div class="mb-4">
+            <label for="nombre" class="block text-gray-700">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              class="w-full px-4 py-2 mt-1 border rounded-md"
+              value="{{ cliente.nombre }}"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-4 py-2 mt-1 border rounded-md"
+              value="{{ cliente.email }}"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="telefono" class="block text-gray-700">Teléfono</label>
+            <input
+              type="text"
+              id="telefono"
+              name="telefono"
+              class="w-full px-4 py-2 mt-1 border rounded-md"
+              value="{{ cliente.telefono }}"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="motivo" class="block text-gray-700">Motivo</label>
+            <input
+              type="text"
+              id="motivo"
+              name="motivo"
+              class="w-full px-4 py-2 mt-1 border rounded-md"
+              value="{{ cliente.motivo }}"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="mensaje" class="block text-gray-700">Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              class="w-full px-4 py-2 mt-1 border rounded-md"
+              required
+            >
+{{ cliente.mensaje }}</textarea
+            >
+          </div>
+
+          <div class="flex justify-between">
+            <a
+              href="{{ url_for('mostrar_clientes') }}"
+              class="bg-gray-300 text-black px-4 py-2 rounded-md"
+              >Cancelar</a
+            >
+            <button
+              type="submit"
+              class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+            >
+              Actualizar Cliente
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </body>

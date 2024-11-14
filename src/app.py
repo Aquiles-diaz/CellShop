@@ -118,6 +118,25 @@ def mostrar_clientes():
     clientes = Contacto.query.all()  # Recupera todos los contactos
     return render_template('clientes.html', clientes=clientes)
 
+@app.route('/eliminar_cliente/<int:id>', methods=['GET', 'POST'])
+def eliminar_cliente(id):
+    # Buscar el cliente por ID
+    cliente = Contacto.query.get_or_404(id)
+    
+    try:
+        # Eliminar el cliente
+        db.session.delete(cliente)
+        db.session.commit()
+        flash("Cliente eliminado con éxito.", "success")
+    except Exception as e:
+        db.session.rollback()
+        flash("Error al eliminar el cliente. Intenta nuevamente.", "error")
+        print(f"Error al eliminar el cliente: {e}")
+        
+    return redirect(url_for('mostrar_clientes'))
+
+
+
 @app.route('/carrito')
 def carrito():
     try:
